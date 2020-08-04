@@ -154,4 +154,39 @@ type MsgUpdateContractOwner struct {
 
 ## Parameters
 
+```go
+type Params struct {
+	MaxContractSize    uint64 `json:"max_contract_size" yaml:"max_contract_size"`         // allowed max contract bytes size
+	MaxContractGas     uint64 `json:"max_contract_gas" yaml:"max_contract_gas"`           // allowed max gas usages per each contract execution
+	MaxContractMsgSize uint64 `json:"max_contract_msg_size" yaml:"max_contract_msg_size"` // allowed max contract exe msg bytes size
+	GasMultiplier      uint64 `json:"gas_multiplier" yaml:"gas_multiplier"`               // defines how many cosmwasm gas points = 1 sdk gas point
+}
+```
+
+::: details JSON Example
+
+```json
+{
+  "owner": "terra...",
+  "new_owner": "terra...",
+  "contract": "terra..."
+}
+```
+
+### MaxContractSize
+
+- type: `uint64`
+
+### MaxContractGas
+
+- type: `uint64`
+
+### MaxContractMsgSize
+
+- type: `uint64`
+
+### GasMultiplier
+
+- type: `uint64`
+
 ## Events
